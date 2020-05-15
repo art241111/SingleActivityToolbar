@@ -9,6 +9,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.main_activity.*
 
@@ -32,8 +33,8 @@ class MainActivity : AppCompatActivity() {
         // NavController manages app navigation within a {@link NavHost}
         val navController = host.navController
 
-        // Installing NavController on the settings button
-        setupBottomNavMenu(navController)
+        // Installing NavController on BottomMenu
+        setUpBottomNav(navController)
     }
 
     /**
@@ -62,11 +63,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Installing NavController on the settings button
+     * Installing NavController on the Bottom menu
      * @param navController - NavController associated with navigation
      */
-    private fun setupBottomNavMenu(navController: NavController) {
-        val bottomNav = findViewById<NavigationView>(R.id.nav_view)
+    private fun setUpBottomNav(navController: NavController) {
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav_view)
         bottomNav?.setupWithNavController(navController)
     }
 

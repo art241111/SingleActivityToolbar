@@ -29,4 +29,9 @@
         android:name="ru.art241111.singleactivitytoolbar.ui.main.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/personFragment"
+        android:name="ru.art241111.singleactivitytoolbar.ui.main.personFragment"
+        android:label="fragment_person"
+        tools:layout="@layout/fragment_person" />
 </navigation>
